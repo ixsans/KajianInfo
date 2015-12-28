@@ -1,4 +1,4 @@
-package com.yanmii.kajianinfo.mvp.terbaru;
+package com.yanmii.kajianinfo.mvp.populer;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -17,12 +17,12 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class TerbaruAdapter extends RecyclerView.Adapter<TerbaruAdapter.ViewHolder> {
+public class PopulerAdapter extends RecyclerView.Adapter<PopulerAdapter.ViewHolder> {
 
     private List<Audio> audioList;
     private ClickListener clickListener;
 
-    public TerbaruAdapter(List<Audio> audioList){
+    public PopulerAdapter(List<Audio> audioList){
         this.audioList = audioList;
     }
 

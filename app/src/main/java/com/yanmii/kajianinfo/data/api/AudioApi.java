@@ -17,6 +17,9 @@ public interface AudioApi {
     @GET("/audio/index")
     Observable<AudioListResponse> getTerbaru();
 
+    @GET("/audio/top")
+    Observable<AudioListResponse> getPopuler();
+
     @GET("/audio/show/{id}")
     Observable<Audio> getDetailAudio(@Path("id") String id);
 }

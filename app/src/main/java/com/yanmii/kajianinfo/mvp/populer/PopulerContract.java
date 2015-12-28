@@ -1,4 +1,4 @@
-package com.yanmii.kajianinfo.mvp.terbaru;
+package com.yanmii.kajianinfo.mvp.populer;
 
 import android.support.annotation.NonNull;
 
@@ -8,9 +8,8 @@ import com.yanmii.kajianinfo.mvp.base.BaseView;
 
 import java.util.List;
 
-public class TerbaruContract {
-
-    public interface TerbaruView extends BaseView{
+public class PopulerContract {
+    public interface PopulerView extends BaseView {
 
         void setItems(List<Audio> items);
 
@@ -18,7 +17,7 @@ public class TerbaruContract {
 
     }
 
-    public interface TerbaruPresenter extends BasePresenter{
+    public interface PopulerPresenter extends BasePresenter{
 
         void loadContent();
 

@@ -1,16 +1,13 @@
 package com.yanmii.kajianinfo.mvp.detailaudio;
 
 import com.yanmii.kajianinfo.data.Audio;
+import com.yanmii.kajianinfo.mvp.base.BaseView;
 
 public class DetailAudioContract {
 
-    public interface DetailAudioView {
+    public interface DetailAudioView extends BaseView{
 
         void initViews();
-
-        void showLoading(boolean showLoading);
-
-        void showError(String message);
 
         void setAudio(Audio audio);
 

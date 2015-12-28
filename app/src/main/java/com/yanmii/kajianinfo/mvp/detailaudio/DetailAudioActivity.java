@@ -33,8 +33,12 @@ public class DetailAudioActivity extends AppCompatActivity implements DetailAudi
     View mContainerDetails;
     @Bind(R.id.judul)
     TextView mTextJudul;
+    @Bind(R.id.pembicara)
+    TextView mTextPembicara;
     @Bind(R.id.deskripsi)
     TextView mTextDeskripsi;
+    @Bind(R.id.tempat)
+    TextView mTextTempat;
     @Bind(R.id.kontributor)
     TextView mTextKontributor;
     @Bind(R.id.ukuran)
@@ -106,6 +110,10 @@ public class DetailAudioActivity extends AppCompatActivity implements DetailAudi
         mContainerDetails.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.GONE);
 
+        mTextError.setText(message);
+        mTextError.setVisibility(View.VISIBLE);
+        mTextError.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_error_connection,0,0);
+
     }
 
     @Override
@@ -114,6 +122,10 @@ public class DetailAudioActivity extends AppCompatActivity implements DetailAudi
         mContainerDetails.setVisibility(View.VISIBLE);
         mTextJudul.setText(audio.judul);
         mTextDeskripsi.setText(Html.fromHtml(audio.deskripsi));
+        mTextKontributor.setText(audio.kontributor.nama);
+        mTextUkuran.setText(String.format("%s MB", audio.ukuran));
+        mTextTempat.setText(audio.tempat.nama);
+        mTextPembicara.setText(audio.ustadz.nama);
 
         ImageLoader.displayImage(getApplicationContext(), audio.gambar, mImagePoster);
     }

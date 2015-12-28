@@ -2,6 +2,7 @@ package com.yanmii.kajianinfo.data;
 
 public class Playlist  {
 
+    public int id;
     public String judul;
 
 

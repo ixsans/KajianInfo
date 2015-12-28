@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity
 
         mAdapter = new SectionPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mAdapter);
+        mPager.setCurrentItem(1);
         mPager.setOffscreenPageLimit(3);
 
         mTabs.setupWithViewPager(mPager);
@@ -141,11 +142,12 @@ public class MainActivity extends AppCompatActivity
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    if (terbaruFragment == null) terbaruFragment = new TerbaruFragment();
-                    return terbaruFragment;
-                case 1:
                     if (popularFragment == null) popularFragment = new PopulerFragment();
                     return popularFragment;
+
+                case 1:
+                    if (terbaruFragment == null) terbaruFragment = new TerbaruFragment();
+                    return terbaruFragment;
 
                 case 2:
                     if (tagFragment == null) tagFragment = new TagFragment();
