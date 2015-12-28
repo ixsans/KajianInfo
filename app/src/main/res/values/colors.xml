@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#002F2F</color>
+    <color name="colorPrimaryDark">#001b1b</color>
+    <color name="colorAccent">#a68d50</color>
+    <color name="colorHighlight">#ABB5B5B5</color>
+    <color name="tiny_separator">#d6d6d6</color>
+</resources>
